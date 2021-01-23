@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2020 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/camera_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/view_finder"
+        android:layout_height="match_parent"
+        android:layout_width="410dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textLpView"
+        tools:ignore="MissingConstraints">
+
+    </androidx.camera.view.PreviewView>
+
+    <TextView
+        style="@style/WhiteText"
+        android:id="@+id/textLpView"
+        android:layout_height="match_parent"
+        android:layout_width="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view_finder"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        android:scrollbars="vertical"
+        android:background="#000000"
+        android:singleLine="false"
+        android:maxLines="15"/>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/tabla_cuerpo"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/unselected_background_color"-->
+<!--        android:layout_width="320dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/view_finder"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        android:scrollbars="vertical"-->
+<!--        android:singleLine="false"-->
+<!--        android:maxLines="15">-->
+
+<!--        <FrameLayout-->
+<!--            android:id="@+id/activity_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
+
+<!--    </RelativeLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

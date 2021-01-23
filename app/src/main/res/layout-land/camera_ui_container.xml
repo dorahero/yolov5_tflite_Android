@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2020 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/camera_ui_container"
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Camera control and gallery buttons -->
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="197dp"
+        android:layout_height="124dp"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBitmap"
+        app:layout_constraintEnd_toEndOf="@+id/ivBitmap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@id/camera_switch_button"
+        android:layout_width="@dimen/round_button_medium"
+        android:layout_height="@dimen/round_button_medium"
+        android:layout_marginEnd="@dimen/margin_xlarge"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:padding="@dimen/spacing_small"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_switch"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/gallery_button_alt" />
+
+    <ImageButton
+        android:id="@id/camera_capture_button"
+        android:layout_width="@dimen/round_button_large"
+        android:layout_height="@dimen/round_button_large"
+        android:layout_marginEnd="@dimen/shutter_button_margin"
+        android:background="@drawable/button_custom"
+        android:contentDescription="@string/capture_button_alt"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@id/photo_view_button"
+        android:layout_width="@dimen/round_button_medium"
+        android:layout_height="@dimen/round_button_medium"
+        android:layout_marginEnd="@dimen/margin_xlarge"
+        android:layout_marginTop="@dimen/margin_small"
+        android:padding="@dimen/spacing_large"
+        android:scaleType="fitXY"
+        android:background="@drawable/ic_outer_circle"
+        app:srcCompat="@drawable/ic_photo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/switch_camera_button_alt" />
+
+    <ImageView
+        android:id="@+id/ivBitmap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
