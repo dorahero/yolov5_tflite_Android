@@ -14,4 +14,4 @@
 
 # Step:
 - Take picture and wait a moment  
-- It will be list what you see
+- It will list what you see
