@@ -9,7 +9,7 @@
 
 # Installation:
 - Install on Android Studio
-- Put your `any_yolov5.tflite` model and `label.txt` in `assert` folder 
+- Put your `any_yolov5.tflite` model and `label.txt` in `assets` folder 
 - Run
 
 # Step:

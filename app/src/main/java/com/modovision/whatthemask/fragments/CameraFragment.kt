@@ -116,9 +116,9 @@ class CameraFragment : Fragment() {
 
     private val TF_OD_API_IS_QUANTIZED = true
 
-    private val TF_OD_API_MODEL_FILE = "car288_0121_last-fp16.tflite"
+    private val TF_OD_API_MODEL_FILE = "yolov5s-fp16.tflite"
 
-    private val TF_OD_API_LABELS_FILE = "file:///android_asset/car288.txt"
+    private val TF_OD_API_LABELS_FILE = "file:///android_asset/coco.txt"
 
 
     private var detector: Classifier? = null
